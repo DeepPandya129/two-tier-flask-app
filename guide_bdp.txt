@@ -1,0 +1,15 @@
+docker compose deployment:
+
+1. clone repo
+2. write a docker file for backend/main application code to create an image. just to varify and try to run container.
+3. If docker file get success then write docker compose file.
+4. Here we are using MYSQL. So try to make sure get put proper credential in compose file.
+5. According application you need to crete a table in MYSQL DB. use below command
+6. Go inside MYSQL container usind "docker exec -it <ID> bash" command.
+7. Then login in your mysql server using command "mysql -u root -p" Write root password provided in compose file.
+8. show databases; --> you will see your new created database named in compose file. 
+9. go inside your database and crete table as mentoiend in python code.
+        -> "use <your db name>"
+        -> "crete table messages (message varchar(255));" -> now done
+10. you can see data comming from front end web.
+    -> command: "select * from messages "
